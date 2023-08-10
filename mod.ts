@@ -3,7 +3,7 @@ type Holiday = {
   name: string;
 };
 
-export function kinitesArgiesFunc(year: number) {
+export function kinitesArgies(year: number) {
   let e = 10;
 
   if (year > 1600) {
@@ -58,7 +58,7 @@ export function greekHolidays(year: string): Holiday[] {
     { date: `${year}-12-26`, name: "Επόμενη των Χριστουγέννων" },
   ];
 
-  const movableHolidays: Holiday[] = kinitesArgiesFunc(parseInt(year));
+  const movableHolidays: Holiday[] = kinitesArgies(parseInt(year));
   const holidays = [...fixedHolidays, ...movableHolidays].sort((a, b) =>
     a.date > b.date ? 1 : -1
   );
